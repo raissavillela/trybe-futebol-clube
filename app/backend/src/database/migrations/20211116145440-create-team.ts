@@ -1,7 +1,8 @@
-import { QueryInterface, DataTypes } from "sequelize";
+import { QueryInterface, DataTypes } from 'sequelize';
+
 module.exports = {
     up: async (queryInterface: QueryInterface) => {
-      await queryInterface.createTable("teams", {
+      await queryInterface.createTable('teams', {
         id: {
           allowNull: false,
           autoIncrement: true,
@@ -14,7 +15,7 @@ module.exports = {
       });
     },
     down: async (queryInterface: QueryInterface) => {
-      await queryInterface.dropTable("teams");
+      await queryInterface.dropTable('teams');
     },
   };
   

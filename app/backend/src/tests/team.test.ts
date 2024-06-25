@@ -2,7 +2,6 @@ import * as sinon from 'sinon';
 import * as chai from 'chai';
 // @ts-ignore
 import chaiHttp = require('chai-http');
-
 import { app } from '../app';
 import Team from '../database/models/TeamModel';
 
@@ -13,7 +12,7 @@ chai.use(chaiHttp);
 const { expect } = chai;
 
 describe('Testes do Teams', () => {
-  it('should return a list of teams', async () => {
+  it('Testa o retorno da lista de times', async () => {
     sinon.stub(Team, 'findAll').resolves([
       {
         id: 1,
@@ -36,7 +35,7 @@ describe('Testes do Teams', () => {
     expect(response.body[1].name).to.be.eq('Team 2');
   });
 
-  it('should return a team', async () => {
+  it('Testa se retorna um time', async () => {
     sinon.stub(Team, 'findByPk').resolves({
       id: 1,
       name: 'Team 1',

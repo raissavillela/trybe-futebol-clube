@@ -14,7 +14,8 @@ module.exports = {
         allowNull: false,
         references: {
           model: 'Teams',
-          key: 'id'
+          key:
+           'id'
         }
       },
       homeTeamGoals: {
