@@ -1,8 +1,9 @@
-import { QueryInterface, DataTypes } from "sequelize";
+import { QueryInterface, DataTypes, Model } from "sequelize";
+import iMatches from "../../Interfaces/iMatches"
 
 module.exports = {
   up: async (queryInterface: QueryInterface) => {
-    await queryInterface.createTable('Matches', {
+    await queryInterface.createTable<Model<iMatches>>('matches', {
       id: {
         allowNull: false,
         autoIncrement: true,
@@ -41,6 +42,6 @@ module.exports = {
     });
   },
   down: async (queryInterface: QueryInterface) => {
-    await queryInterface.dropTable('Matches');
+    await queryInterface.dropTable('matches');
   }
 };

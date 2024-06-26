@@ -10,7 +10,5 @@ COPY . .
 
 EXPOSE 3001
 
-RUN npm run build
-
-ENTRYPOINT ["npm", "run"]
+ENTRYPOINT [ "npm", "run" ]
 CMD [ "start" ]

@@ -1,8 +1,9 @@
-import { QueryInterface, DataTypes } from "sequelize";
+import { QueryInterface, DataTypes, Model } from "sequelize";
+import iUsers from "../../Interfaces/iUsers"
 
 module.exports = {
   up: async (queryInterface: QueryInterface) => {
-    await queryInterface.createTable('users', {
+    await queryInterface.createTable<Model<iUsers>>('users', {
       id: {
         allowNull: false,
         autoIncrement: true,
