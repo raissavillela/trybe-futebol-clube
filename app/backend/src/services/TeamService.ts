@@ -8,4 +8,8 @@ export default class TeamService {
   public static getTeam(id: number) {
     return Team.findByPk(id);
   }
+
+  public static checkTeamExists(id: number) {
+    return Team.findByPk(id);
+  }
 }
